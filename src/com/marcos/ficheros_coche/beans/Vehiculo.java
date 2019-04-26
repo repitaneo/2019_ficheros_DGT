@@ -6,18 +6,28 @@ public class Vehiculo {
 	private String marca;
 	private String modelo;
 	private String color;
-	
+	private Propietario propietario;	
 	
 	
 	
 	
 	@Override
 	public String toString() {
-		return "VHC [" + matrícula + "," + marca + "," + modelo + "," + color+ "]";
+		return "VHC [" +propietario+","+ matrícula + "," + marca + "," + modelo + "," + color+ "]";
 	}
 	
 	
 	
+	
+	
+	
+	
+	public Propietario getPropietario() {
+		return propietario;
+	}
+	public void setPropietario(Propietario propietario) {
+		this.propietario = propietario;
+	}
 	public String getMatrícula() {
 		return matrícula;
 	}

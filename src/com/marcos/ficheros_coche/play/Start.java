@@ -6,6 +6,7 @@ import com.marcos.ficheros_coche.beans.Propietario;
 import com.marcos.ficheros_coche.beans.Vehiculo;
 import com.marcos.ficheros_coche.file.PropietariosReader;
 import com.marcos.ficheros_coche.file.VehiculosReader;
+import com.marcos.ficheros_coche.file.VinculacionesReader;
 
 public class Start {
 
@@ -14,12 +15,18 @@ public class Start {
 		
 		ArrayList<Vehiculo> listaCoches;
 		listaCoches = VehiculosReader.getDatos();
-		System.out.println(listaCoches);
+		System.out.println(listaCoches+"\n");
 		
 		
 		ArrayList<Propietario> listaPersonas;
 		listaPersonas = PropietariosReader.getDatos();
-		System.out.println(listaPersonas);
+		//System.out.println(listaPersonas);
+		
+		
+		ArrayList<Vehiculo> listaCochesVinculados;
+		listaCochesVinculados = VinculacionesReader.getDatos(listaCoches,listaPersonas);
+		System.out.println(listaCochesVinculados);
+		
 		
 		
 	}
